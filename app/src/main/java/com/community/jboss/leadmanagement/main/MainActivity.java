@@ -122,15 +122,7 @@ public class MainActivity extends BaseActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            SettingsFragment fragment = new SettingsFragment();
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, fragment)
-                    .commit();
-            setTitle(fragment.getTitle());
-            navigationView.setSelectedItemId(R.id.nav_settings);
-            return true;
-        }else if( id == R.id.action_import ){
+        if( id == R.id.action_import ){
 
             // Disable this action if user is not signed in...
             if(mAuth.getCurrentUser() == null){
