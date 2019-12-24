@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'io.fabric'
 
@@ -81,6 +83,10 @@ dependencies {
     implementation 'com.github.msayan:tutorial-view:v1.0.6'
     // Gson
     implementation 'com.google.code.gson:gson:2.8.5'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+}
+repositories {
+    mavenCentral()
 }
 //apply plugin: 'com.google.gms.google-services'
