@@ -7,13 +7,12 @@ import java.util.*
 
 @Entity
 data class Contact(
+        @PrimaryKey
+        val id:String = UUID.randomUUID().toString(),
     var name:String,
     var mail:String,
     var image: ByteArray,
     var query: String,
     var location:String,
     var notes:String
-){
-    @PrimaryKey
-    val id:String = UUID.randomUUID().toString()
-}
+)
